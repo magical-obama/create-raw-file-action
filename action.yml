@@ -1,5 +1,8 @@
 name: 'Create raw file'
 description: 'Create a file with raw data'
+branding:
+  icon: file-plus
+  color: green
 inputs:
   file-name:
     description: 'The name of the file to create'
