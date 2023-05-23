@@ -1,0 +1,17 @@
+name: 'Create raw file'
+description: 'Create a file with raw data'
+inputs:
+  file-name:
+    description: 'The name of the file to create'
+    required: true
+    default: '.env'
+  file-data:
+    description: 'The data to write to the file'
+    required: false
+    default: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.file-name }}
+    - ${{ inputs.file-data }}
